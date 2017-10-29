@@ -1,29 +1,27 @@
-# Proposta
+# Tarefas:
 
-## Tarefas:
+## Configurar MiniNet
 
-### Configurar MiniNet
+## Executar o Exemplo do OpenFlow
 
-### Executar o Exemplo do OpenFlow
-
-### Ausência de TLS:
+## Ausência de TLS:
 * Verificar se é possível desabilitar o TLS no OpenFlow
 * Implementar a arquitetura da rede
 * Desenvolver o script do ataque
 * Coletar resultados
 
-### Ataque de Vazamento de Informação (regras):
+## Ataque de Vazamento de Informação (regras):
 * Implementar a arquitetura da rede
 * Implementar o método para inferir se existe regra
 * Coletar resultados
 * Escolher um ataque que se aproveite da regra aprendida
 
-### Ataque de Negação de Serviço:
+## Ataque de Negação de Serviço:
 * Implementar a arquitetura da rede
 * Desenvolver o script do ataque
 * Coletar resultados
 
-## Bibliografia:
+# Bibliografia:
 
 [1] Sandra Scott-Hayward, Gemma O’Callaghan, Sakir Sezer - SDN Security: A
 Survey - 2013 IEEE SDN for Future Networks and Services (SDN4FNS)
@@ -35,5 +33,3 @@ Survey - 2013 IEEE SDN for Future Networks and Services (SDN4FNS)
 [4] R. Kloeti, OpenFlow: A Security Analysis, Tese de Mestrado, Swiss Federal Institute of Technology Zurich (ETH), 2013. Disponível em: ftp://ftp.tik.ee.ethz.ch/pub/students/2012-HS/MA-2012-20.pdf.
 
 [5] Mininet (Ferramenta de Virtualização de Redes): http://mininet.org/
-
-## Cronograma das atividades:
