@@ -4,22 +4,24 @@
 
 ## Executar o Exemplo do OpenFlow
 
-## Ausência de TLS:
-* Verificar se é possível desabilitar o TLS no OpenFlow
-* Implementar a arquitetura da rede
-* Desenvolver o script do ataque
-* Coletar resultados
+## Ausência de TLS (até 22/11):
+* Verificar se é possível desabilitar o TLS no OpenFlow (até 6/11)
+* Implementar a arquitetura da rede (até 13/11)
+* Desenvolver o script do ataque (até 20/11)
+* Coletar resultados (até 22/11)
 
-## Ataque de Vazamento de Informação (regras):
-* Implementar a arquitetura da rede
-* Implementar o método para inferir se existe regra
-* Coletar resultados
-* Escolher um ataque que se aproveite da regra aprendida
+## Ataque de Vazamento de Informação (regras) (até 23/11):
+* Implementar a arquitetura da rede (até 13/11)
+* Implementar o método para inferir se existe regra (até 18/11)
+* Coletar resultados (até 21/11)
+* Escolher um ataque que se aproveite da regra aprendida (até 23/11)
 
-## Ataque de Negação de Serviço:
-* Implementar a arquitetura da rede
-* Desenvolver o script do ataque
-* Coletar resultados
+## Ataque de Negação de Serviço (até 22/11):
+* Implementar a arquitetura da rede (até 13/11)
+* Desenvolver o script do ataque (até 20/11)
+* Coletar resultados (até 22/11)
+
+## Preparar Apresentação e Relatório (até 24/11)
 
 # Bibliografia:
 
