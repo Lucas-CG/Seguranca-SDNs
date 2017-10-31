@@ -21,7 +21,7 @@ Envolve realizar o *download* da máquina virtual oferecida pelo Mininet, que j�
 Essa etapa serve para o grupo aprender a programar os controladores e criar uma arquitetura básica de rede, conhecimentos necessários para implementar os ataques. Ao final, serão gerados códigos e comandos que podem ser reutilizados para facilitar o desenvolvimento dos ataques.
 
 ### Ausência de TLS (até 22/11):
-Esse ataque explora uma especificação do OpenFlow. Segundo o padrão, pode-se ser usado o TLS para garantir a criptografia entre dois nós quaisquer de uma SDN, mas essa configuração não é forçada e não é especificada uma versão do TLS. Com isso, o resultado é que existem muitas implementações de SDNs que não utilizam esses protocolos, sendo os dados transmitidos totalmente expostos[1][2]. Com isso, pretendemos implementar um ataque de *man-in-the-middle*, em que um usuário malicioso intercepta a comunicação entre um controlador e um dispositivo do plano de dados, descobre o endereço IP do controlador e o utiliza para instalar regras maliciosas em vários comutadores para provocar um ataque de negação de serviços.
+Pretendemos implementar um ataque de *man-in-the-middle*, em que um usuário malicioso intercepta a comunicação entre um controlador e um dispositivo do plano de dados, descobre o endereço IP do controlador e o utiliza para instalar regras maliciosas em vários comutadores para provocar um ataque de negação de serviços.
 
 #### Tarefas Associadas
 * Verificar se é possível desabilitar o TLS no OpenFlow (até 6/11)
