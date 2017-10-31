@@ -64,3 +64,5 @@ Survey - 2013 IEEE SDN for Future Networks and Services (SDN4FNS)
 [4] R. Kloeti, OpenFlow: A Security Analysis, Tese de Mestrado, Swiss Federal Institute of Technology Zurich (ETH), 2013. Disponível em: ftp://ftp.tik.ee.ethz.ch/pub/students/2012-HS/MA-2012-20.pdf.
 
 [5] Mininet (Ferramenta de Virtualização de Redes): http://mininet.org/
+
+[6] Seungwon Shin; Guofei Gu; “Attacking Software-Defined Networks: A First Feasibility Study”. 
