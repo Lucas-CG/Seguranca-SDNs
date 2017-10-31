@@ -21,7 +21,7 @@ Envolve realizar o *download* da máquina virtual oferecida pelo Mininet, que j�
 Essa etapa serve para o grupo aprender a programar os controladores e criar uma arquitetura básica de rede, conhecimentos necessários para implementar os ataques. Ao final, serão gerados códigos e comandos que podem ser reutilizados para facilitar o desenvolvimento dos ataques.
 
 ### Ausência de TLS (até 22/11):
-Pretendemos implementar um ataque de *man-in-the-middle*, em que um usuário malicioso intercepta a comunicação entre um controlador e um dispositivo do plano de dados, descobre o endereço IP do controlador e o utiliza para instalar regras maliciosas em vários comutadores para provocar um ataque de negação de serviços.
+Pretendemos implementar um ataque de *man-in-the-middle*. Para isso, interceptaremos os pacotes e descobriremos o IP do controlador, podendo portanto, utilizar IP _spoofing_ para enviar mensagens para os comutadores.
 
 #### Tarefas Associadas
 * Verificar se é possível desabilitar o TLS no OpenFlow (até 6/11)
@@ -30,7 +30,7 @@ Pretendemos implementar um ataque de *man-in-the-middle*, em que um usuário mal
 * Coletar resultados (até 22/11)
 
 ### Ataque de Vazamento de Informação (regras) (até 22/11):
-Esse ataque é baseado na implementação descrita em [3] e [4]. Em controladores que utilizam *agregação* para criar regras (ou seja, que criam regras que podem agrupar mais de um fluxo, por exemplo uma regra que trate todos os pacotes que utilizam TCP), é possível que um usuário malicioso, ao verificar os tempos de resposta de um serviço oferecido na rede a outro usuário, infira se uma regra foi implementada pela diferença entre esses tempos. Se o atacante detectar que a regra existe com uma alta probabilidade, ele poderia usá-la para executar um ataque sem que os dados enviados por ele sejam verificados pelo controlador, dessa forma não sendo detectados por ele como maliciosos.
+Esse ataque é baseado na implementação descrita em [3] e [4]. Em controladores que utilizam *agregação* para criar regras , é possível que um usuário verifique os tempos de resposta de um serviço oferecido na rede a outro usuário e infira se uma regra foi implementada.
 
 #### Tarefas Associadas
 * Implementar a arquitetura da rede (até 13/11)
@@ -39,7 +39,7 @@ Esse ataque é baseado na implementação descrita em [3] e [4]. Em controladore
 * Escolher um ataque que se aproveite da regra aprendida (até 22/11)
 
 ### Ataque de Negação de Serviço (até 22/11):
-Esse ataque também é baseado em [3] e [4]. Objetiva-se executar um ataque de negação de serviços (DoS) em um dispositivo do plano de dados, considerando que o controlador não utiliza agregação. Assim, cada pacote gerado tem uma variação pequena no cabeçalho, que gera uma nova regra que deve ser criada pelo controlador e instalada no comutador. Com isto, deseja-se observar a ocorrência do estouro da capacidade de armazenar regras, da indisponibilização de um comutador, da indisponibilização do controlador e do congestionamento da rede.
+Esse ataque também é baseado em [3] e [4]. Objetiva-se executar um ataque de negação de serviços (DoS) em um dispositivo do plano de dados, considerando que o controlador não utiliza agregação.
 
 #### Tarefas Associadas
 * Implementar a arquitetura da rede (até 13/11)
