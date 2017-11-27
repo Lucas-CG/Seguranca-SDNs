@@ -201,19 +201,22 @@ class l3_switch (EventMixin):
                     % (dpid, inport, packet.next.srcip, dstaddr, prt))
 
           actions = []
-          actions.append(of.ofp_action_input(port = of.OFPP_ALL)
           actions.append(of.ofp_action_dl_addr.set_dst(mac))
           actions.append(of.ofp_action_output(port = prt))
           match = of.ofp_match.from_packet(packet, inport)
           match.dl_src = None # Wildcard source MAC
+          match.nw_src = None
+          match.ip_src = None
+          match.tp_src = None
+          match.in_port = None
 
           msg = of.ofp_flow_mod(command=of.OFPFC_ADD,
                                 idle_timeout=FLOW_IDLE_TIMEOUT,
                                 hard_timeout=of.OFP_FLOW_PERMANENT,
                                 buffer_id=event.ofp.buffer_id,
                                 actions=actions,
-                                match=of.ofp_match.from_packet(packet,
-                                                               inport))
+                                match=match)
+
           event.connection.send(msg.pack())
       elif self.arp_for_unknowns:
         # We don't know this destination.
@@ -334,4 +337,5 @@ def launch (fakeways="", arp_for_unknowns=None):
   else:
     arp_for_unknowns = str_to_bool(arp_for_unknowns)
   core.registerNew(l3_switch, fakeways, arp_for_unknowns)
+
 
