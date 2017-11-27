@@ -24,7 +24,7 @@ def myNetwork():
                       port=6633)
 
     info( '*** Add switches\n')
-    s4 = net.addSwitch('s4', cls=OVSKernelSwitch)
+    s2 = net.addSwitch('s2', cls=OVSKernelSwitch)
     s1 = net.addSwitch('s1', cls=OVSKernelSwitch)
 
     info( '*** Add hosts\n')
@@ -37,8 +37,8 @@ def myNetwork():
     net.addLink(h1, s1)
     net.addLink(h2, s1)
     net.addLink(h3, s1)
-    net.addLink(s1, s4)
-    net.addLink(h4, s4)
+    net.addLink(s1, s2)
+    net.addLink(h4, s2)
 
     info( '*** Starting network\n')
     net.build()
